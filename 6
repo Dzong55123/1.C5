@@ -1,0 +1,40 @@
+public class AreaCalculator {
+
+    // 計算圓面積
+    public static double calCircle(double radius) {
+        double PI = 3.1415926;
+        return radius * radius * PI;
+    }
+
+    // 計算三角形面積
+    public static double calTriangle(double base, double height) {
+        return base * height / 2;
+    }
+
+    // 計算長方形面積
+    public static double calRectangle(double length, double width) {
+        return length * width;
+    }
+
+    public static void main(String[] args) {
+        double circleRadius = 5;
+        double triangleBase = 10;
+        double triangleHeight = 5;
+        double rectangleLength = 5;
+        double rectangleWidth = 10;
+
+        // 計算各圖形面積
+        double circleArea = calCircle(circleRadius);
+        double triangleArea = calTriangle(triangleBase, triangleHeight);
+        double rectangleArea = calRectangle(rectangleLength, rectangleWidth);
+
+        // 計算總面積
+        double totalArea = circleArea + triangleArea + rectangleArea;
+
+        // 輸出結果
+        System.out.println("圓面積：" + circleArea);
+        System.out.println("三角形面積：" + triangleArea);
+        System.out.println("長方形面積：" + rectangleArea);
+        System.out.println("總面積：" + totalArea);
+    }
+}
