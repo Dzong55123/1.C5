@@ -1,0 +1,14 @@
+def factorial(n):
+    result = 1
+    for i in range(1, n + 1):
+        result *= i
+    return result
+
+n = int(input("Input (0<=n<=16)來輸入數值："))
+
+if 0 <= n <= 16:
+    print(f"{n}的階層為：{factorial(n)}")
+elif n == 999:
+    print("階層到999超出計算範圍")
+else:
+    print("請輸入0到16之間的數值")
